@@ -1,4 +1,4 @@
-# mqg811
-Devoirs de MQG811 
+# STT811
+Devoirs de STT811 
 
 Premier Devoir
