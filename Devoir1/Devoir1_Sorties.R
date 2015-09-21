@@ -18,10 +18,14 @@ numero1 <- function() {
 
 numero2 <- function() {
   cirque = setup()
-  t = table(cirque$Pays)
-  confint(t)
-  
-  return ("Hello World")
+  a = 31.58
+  s = 2
+  n = length(cirque$Pays)
+  error <- qnorm(0.90)*s/sqrt(n)
+  left <- a-error
+  right <- a+error
+  sortie <- c(a,n,error, left, right)
+  return (sortie)
   
   
 }
