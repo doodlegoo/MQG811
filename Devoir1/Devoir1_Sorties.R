@@ -27,5 +27,28 @@ numero2 <- function() {
   sortie <- c(a,n,error, left, right)
   return (sortie)
   
+}
+
+numero3 <- function() {
+  cirque = setup()
+  sortie <- mean(cirque$AppreciationShow) 
+  return (paste("Moyenne", sortie, sep=" : ")) 
   
 }
+numero4 <- function() {
+  cirque = setup()
+  
+  return ("Numéro 4") 
+  
+}
+numero5 <- function() {
+  cirque = setup()
+  return ("Numéro 5") 
+  
+}
+numero6 <- function() {
+  cirque = setup()
+  return ("Numéro 6") 
+  
+}
+

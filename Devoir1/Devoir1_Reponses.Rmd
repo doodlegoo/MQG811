@@ -27,11 +27,43 @@ Donnez l’intervalle de confiance de niveau 90 % associé à la proportion éch
  numero2()
 ```
 
+# Numéro 3
+Quelle est la moyenne échantillonnale  ̄ x de l’appréciation par rapport aux shows ?
 
-You can also embed plots, for example:
-
-```{r, echo=FALSE}
-# plot(cars)
+```{r echo=FALSE}
+# Fonctions utilisées
+ source('~/Rstudio/STT811/mqg811/Devoir1/Devoir1_Sorties.R', encoding = 'UTF-8')
+ numero3()
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+# Numéro 4
+Donnez l’intervalle de confiance de niveau 95 % associé à la moyenne échantillonnale trouvéeen (3), et interprétez-le
+
+```{r echo=FALSE}
+# Fonctions utilisées
+ source('~/Rstudio/STT811/mqg811/Devoir1/Devoir1_Sorties.R', encoding = 'UTF-8')
+ numero4()
+```
+
+
+# Numéro 5
+On vous dit que plus de 40 % des runs ont lieu en Amérique du Nord. Soutenez-vous cette affirmation au seuil α = 0, 05 ?
+
+```{r echo=FALSE}
+# Fonctions utilisées
+ source('~/Rstudio/STT811/mqg811/Devoir1/Devoir1_Sorties.R', encoding = 'UTF-8')
+ numero5()
+```
+
+
+# Numéro 4
+On vous dit qu’il y a en moyenne 59 représentations par run. Soutenez-vous cette affirmationau seuil α = 0, 10 ?
+
+```{r echo=FALSE}
+# Fonctions utilisées
+ source('~/Rstudio/STT811/mqg811/Devoir1/Devoir1_Sorties.R', encoding = 'UTF-8')
+ numero6()
+```
+
+
