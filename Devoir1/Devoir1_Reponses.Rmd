@@ -1,0 +1,24 @@
+---
+title: "Devoir1_réponses"
+author: "Vincent Gagnon"
+date: "September 20, 2015"
+output: word_document
+---
+
+Ce premier devoir a été réalisé avec la base de donnée Devoir1_Cirque.sav et l'analyse a été fait avec Rstudio. Ce présent document .docx a été produit à l'aide de RStudio et le R markdown. 
+
+# Numéro 1 
+Quelle est la proportion échantillonnale p des runs qui ont eu lieu aux États-Unis ?
+
+
+```{r}
+summary(cars)
+```
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
