@@ -11,14 +11,27 @@ Ce premier devoir a été réalisé avec la base de donnée Devoir1_Cirque.sav e
 Quelle est la proportion échantillonnale p des runs qui ont eu lieu aux États-Unis ?
 
 
-```{r}
-summary(cars)
+```{r echo=FALSE}
+# Fonctions utilisées
+ source('~/Rstudio/STT811/mqg811/Devoir1/Devoir1_Sorties.R', encoding = 'UTF-8')
+ numero1()
 ```
+On peut donc voir qu'au niveau de l'échantillon des runs qui nous ont été fournis, 37.58% des spectacles se font aux États-Unis.
+
+# Numéro 2
+Donnez l’intervalle de confiance de niveau 90 % associé à la proportion échantillonnale trouvée en (1), et interprétez-le.
+
+```{r echo=FALSE}
+# Fonctions utilisées
+ source('~/Rstudio/STT811/mqg811/Devoir1/Devoir1_Sorties.R', encoding = 'UTF-8')
+ numero2()
+```
+
 
 You can also embed plots, for example:
 
 ```{r, echo=FALSE}
-plot(cars)
+# plot(cars)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
