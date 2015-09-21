@@ -10,60 +10,67 @@ Ce premier devoir a été réalisé avec la base de donnée Devoir1_Cirque.sav e
 # Numéro 1 
 Quelle est la proportion échantillonnale p des runs qui ont eu lieu aux États-Unis ?
 
-
-```{r echo=FALSE}
-# Fonctions utilisées
- source('~/Rstudio/STT811/mqg811/Devoir1/Devoir1_Sorties.R', encoding = 'UTF-8')
- numero1()
-```
-On peut donc voir qu'au niveau de l'échantillon des runs qui nous ont été fournis, 37.58% des spectacles se font aux États-Unis.
+On peut voir dans la figure 1 qu'au niveau de l'échantillon des runs qui nous ont été fournis, 37.58% des spectacles se font aux États-Unis.
 
 # Numéro 2
 Donnez l’intervalle de confiance de niveau 90 % associé à la proportion échantillonnale trouvée en (1), et interprétez-le.
 
-```{r echo=FALSE}
-# Fonctions utilisées
- source('~/Rstudio/STT811/mqg811/Devoir1/Devoir1_Sorties.R', encoding = 'UTF-8')
- numero2()
-```
-
 # Numéro 3
 Quelle est la moyenne échantillonnale  ̄ x de l’appréciation par rapport aux shows ?
-
-```{r echo=FALSE}
-# Fonctions utilisées
- source('~/Rstudio/STT811/mqg811/Devoir1/Devoir1_Sorties.R', encoding = 'UTF-8')
- numero3()
-```
-
 
 # Numéro 4
 Donnez l’intervalle de confiance de niveau 95 % associé à la moyenne échantillonnale trouvéeen (3), et interprétez-le
 
-```{r echo=FALSE}
-# Fonctions utilisées
- source('~/Rstudio/STT811/mqg811/Devoir1/Devoir1_Sorties.R', encoding = 'UTF-8')
- numero4()
-```
-
-
 # Numéro 5
 On vous dit que plus de 40 % des runs ont lieu en Amérique du Nord. Soutenez-vous cette affirmation au seuil α = 0, 05 ?
 
-```{r echo=FALSE}
-# Fonctions utilisées
- source('~/Rstudio/STT811/mqg811/Devoir1/Devoir1_Sorties.R', encoding = 'UTF-8')
- numero5()
-```
-
-
-# Numéro 4
+# Numéro 6
 On vous dit qu’il y a en moyenne 59 représentations par run. Soutenez-vous cette affirmationau seuil α = 0, 10 ?
 
-```{r echo=FALSE}
+## Figure 1
+```{r echo=FALSE} 
 # Fonctions utilisées
- source('~/Rstudio/STT811/mqg811/Devoir1/Devoir1_Sorties.R', encoding = 'UTF-8')
- numero6()
+# source('~/Rstudio/STT811/mqg811/Devoir1/Devoir1_Sorties.R', encoding = 'UTF-8')
+  source('/home/vincent/Github/mqg811/Devoir1/Devoir1_Sorties.R', encoding = 'UTF-8')
+  numero1()
 ```
 
+## Figure 2
+```{r echo=FALSE}
+# Fonctions utilisées
+# source('~/Rstudio/STT811/mqg811/Devoir1/Devoir1_Sorties.R', encoding = 'UTF-8')
+  source('/home/vincent/Github/mqg811/Devoir1/Devoir1_Sorties.R', encoding = 'UTF-8')
+  numero2()
+```
 
+## Figure 3
+```{r echo=FALSE}
+# Fonctions utilisées
+  # source('~/Rstudio/STT811/mqg811/Devoir1/Devoir1_Sorties.R', encoding = 'UTF-8')
+  source('/home/vincent/Github/mqg811/Devoir1/Devoir1_Sorties.R', encoding = 'UTF-8')
+  numero3()
+```
+
+## Figure 4
+```{r echo=FALSE}
+# Fonctions utilisées
+  # source('~/Rstudio/STT811/mqg811/Devoir1/Devoir1_Sorties.R', encoding = 'UTF-8')
+  source('/home/vincent/Github/mqg811/Devoir1/Devoir1_Sorties.R', encoding = 'UTF-8')
+  numero4()
+```
+
+## Figure 5
+```{r echo=FALSE}
+# Fonctions utilisées
+ #source('~/Rstudio/STT811/mqg811/Devoir1/Devoir1_Sorties.R', encoding = 'UTF-8')
+  source('/home/vincent/Github/mqg811/Devoir1/Devoir1_Sorties.R', encoding = 'UTF-8')
+  numero5()
+```
+
+## Figure 6
+```{r echo=FALSE}
+# Fonctions utilisées
+# source('~/Rstudio/STT811/mqg811/Devoir1/Devoir1_Sorties.R', encoding = 'UTF-8')
+  source('/home/vincent/Github/mqg811/Devoir1/Devoir1_Sorties.R', encoding = 'UTF-8')
+  numero6()
+```

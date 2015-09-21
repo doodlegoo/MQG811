@@ -1,7 +1,7 @@
 setup <- function() {
   options(warn=-1)
   library(foreign)
-  dataset = suppressWarnings(read.spss("~/Rstudio/STT811/mqg811/Devoir1/Devoir1_Cirque.sav", to.data.frame=TRUE))
+  dataset = suppressWarnings(read.spss("/home/vincent/Github/mqg811/Devoir1/Devoir1_Cirque.sav", to.data.frame=TRUE))
   return( dataset)
   
   
@@ -12,19 +12,25 @@ numero1 <- function() {
   USAnombre =summary(cirque$Pays)["États-Unis"]
   totalPays = sum(table(cirque$Pays))
   USAprop = USAnombre / totalPays
-  sortie <- c(USAnombre ,sum(table(cirque$Pays)) , USAprop*100)
-  return(sortie)
+  sortie <- (USAprop*100)
+  a = paste("Nombre de runs total", totalPays, sep = ": ")
+  b = paste("Nombre de runs aux États-Unis", USAnombre, sep = ": ")
+  print(a)
+  print(b)
+  sortie
 }
 
 numero2 <- function() {
   cirque = setup()
-  a = 31.58
-  s = 2
+  p = 0.3158
   n = length(cirque$Pays)
-  error <- qnorm(0.90)*s/sqrt(n)
-  left <- a-error
-  right <- a+error
-  sortie <- c(a,n,error, left, right)
+  normale <- qnorm(0.90)
+  
+  error <- normale*sqrt(p*(1-p)/n)
+  left <- p-error
+  right <- p+error
+  sortie <- c(p,n,normale, error, left, right)
+  names(sortie) = c("p", "n", "normale", "error", "left", "right")
   return (sortie)
   
 }
@@ -37,8 +43,19 @@ numero3 <- function() {
 }
 numero4 <- function() {
   cirque = setup()
+  moyenne <- mean(cirque$AppreciationShow) 
+  n = length(cirque$AppreciationShow)
   
-  return ("Numéro 4") 
+  s = sd(cirque$AppreciationShow, na.rm = FALSE)
+  precision <- 0.95
+  student <- qt(precision, df = n-1)
+  error <- student * s /sqrt(n)
+  left = moyenne - error
+  right = moyenne + error
+  sortie <- c(moyenne,n,s,student, error, left, right)
+  names(sortie) = c("moyenne", "n","s", "student", "error", "left", "right")
+  
+  return (sortie) 
   
 }
 numero5 <- function() {
