@@ -29,8 +29,10 @@ numero2 <- function() {
   error <- normale*sqrt(p*(1-p)/n)
   left <- p-error
   right <- p+error
-  sortie <- c(p,n,normale, error, left, right)
-  names(sortie) = c("p", "n", "normale", "error", "left", "right")
+  np = n*p
+  n1p = n*(1-p)
+  sortie <- c(p,n,np, n1p, left, right)
+  names(sortie) = c("p", "n", "np", "n1p", "left", "right")
   return (sortie)
   
 }
