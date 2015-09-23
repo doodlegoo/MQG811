@@ -31,9 +31,12 @@ Quelle est la moyenne échantillonnale  ̄ x de l’appréciation par rapport au
 La moyenne échantillonnale x est de 6,922 tel que présenté dans la figure 3. 
 
 # Numéro 4
-Donnez l’intervalle de confiance de niveau 95 % associé à la moyenne échantillonnale trouvéeen (3), et interprétez-le
+Donnez l’intervalle de confiance de niveau 95 % associé à la moyenne échantillonnale trouvée en (3), et interprétez-le
 
 ******
+
+L'intervalle de confiance présenté dans la figure 4 est valide car on a : n = 323 > 30, np =  > 5 et n(1 − p) =  > 5.  
+On peut y découvrir qu'il y a 95% de chances qu'au niveau de la population, la moyenne de l'appréciation des shows ce situe entre 6.81 et 7.04
 
 
 # Numéro 5
