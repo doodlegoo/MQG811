@@ -54,8 +54,11 @@ numero4 <- function() {
   error <- student * s /sqrt(n)
   left = moyenne - error
   right = moyenne + error
-  sortie <- c(moyenne,n,s,student, error, left, right)
-  names(sortie) = c("moyenne", "n","s", "student", "error", "left", "right")
+  p = moyenne
+  np = n*p
+  n1p = n*(1-p)
+  sortie <- c(moyenne,n,s,np, n1p, left, right)
+  names(sortie) = c("moyenne", "n","s", "np", "n1p", "left", "right")
   
   return (sortie) 
   
