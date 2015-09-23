@@ -5,7 +5,7 @@ date: "September 20, 2015"
 output: word_document
 ---
 
-Ce premier devoir a été réalisé avec la base de donnée Devoir1_Cirque.sav et l'analyse a été fait avec Rstudio. Ce présent document .docx a été produit à l'aide de RStudio et le R markdown. 
+Ce premier devoir a été réalisé avec la base de données Devoir1_Cirque.sav et l'analyse a été faite avec Rstudio. Ce présent document .docx a été produit à l'aide de RStudio et le R markdown. 
 
 # Numéro 1 
 *Quelle est la proportion échantillonnale p des runs qui ont eu lieu aux États-Unis ?*
@@ -13,14 +13,14 @@ Ce premier devoir a été réalisé avec la base de donnée Devoir1_Cirque.sav e
 ******
 
 On peut voir dans la figure 1 qu'au niveau de l'échantillon des runs qui nous ont été fournis, 37.58% des spectacles se font aux États-Unis.  
-Cela représente dans l'échantillon 102 runs aux États-Unis.
+Cela représente dans l'échantillon 102 runs aux États-Unis. 
 
 # Numéro 2
-*Donnez l’intervalle de confiance de niveau 90 % associé à la proportion échantillonnale trouvée en (1), et interprétez-le.*
+*Donnez l'intervalle de confiance de niveau 90 % associé à la proportion échantillonnale trouvée en (1), et interprétez-le.*
 
 ******
 
-L'intervalle de confiance présenté dans la figure 2 est valide car on a : 
+L'intervalle de confiance présenté dans la figure 2 est valide, car on a : 
 
 ~~~~~~~
  n = 323 > 30
@@ -28,28 +28,28 @@ L'intervalle de confiance présenté dans la figure 2 est valide car on a :
  n(1 − p) = 221 > 5  
 ~~~~~~~
 
-On peut y découvrir qu'il y a 90% de chances qu'au niveau de la population, la proportion des "runs" effectué aux États-Unis ce situe entre 28.27% et 34.89%
+On peut y découvrir qu'il y a 90% de chances qu'au niveau de la population, la proportion des runs effectué aux États-Unis se situe entre 28.27% et 34.89%
 
 # Numéro 3-
-*Quelle est la moyenne échantillonnale  ̄ x de l’appréciation par rapport aux shows ?*
+*Quelle est la moyenne échantillonnale   x-barre  de l'appréciation par rapport aux shows ?*
 
 ******
 
 La moyenne échantillonnale x est de 6,922 tel que présenté dans la figure 3. 
 
 # Numéro 4
-*Donnez l’intervalle de confiance de niveau 95 % associé à la moyenne échantillonnale trouvée en (3), et interprétez-le*
+*Donnez l'intervalle de confiance de niveau 95 % associé à la moyenne échantillonnale trouvée en (3), et interprétez-le*
 
 ******
 
-L'intervalle de confiance présenté dans la figure 4 est valide car :   
+L'intervalle de confiance présenté dans la figure 4 est valide. car :   
 
 ~~~~~~~
  n = 323 > 30
 ~~~~~~~
 
 Comme l'appréciation est une variable numérique, nous pouvons nous contenter de vérifier la validité avec seulement le n > 30.  
-On peut y découvrir qu'il y a 95% de chances qu'au niveau de la population, la moyenne de l'appréciation des shows ce situe entre 6.81 et 7.04
+On peut y découvrir qu'il y a 95% de chances qu'au niveau de la population, la moyenne de l'appréciation des shows se situe entre 6.81 et 7.04
 
 
 # Numéro 5
@@ -60,11 +60,11 @@ On peut y découvrir qu'il y a 95% de chances qu'au niveau de la population, la 
 On veut tester l'hypothèse suivante au seuil de α = 0, 05 :   
 
 ~~~~~~~
- H0 : p (Amérique du nord) = 0.4
- H1 : p (Amérique du nord) < 0.4
+ H0 : p (Amérique du Nord) = 0.4
+ H1 : p (Amérique du Nord) < 0.4
 ~~~~~~~
 
-Ce test est considéré comme valide car : 
+Ce test est considéré comme valide, car : 
 
 ~~~~~~~
  n = 323 > 30
@@ -72,15 +72,15 @@ Ce test est considéré comme valide car :
  n(1 − p) = 194 > 5  
 ~~~~~~~
 
-Pour rejetter l'hypothèse H0, il faudrait que p soit égale ou inférieur à 40%. Hors la proportion des runs en Amérique du Nord de notre échantillon est de 43,34%, tel que présenté dans la figure 6. 
+Pour rejeter l'hypothèse H0, il faudrait que p soit égale ou inférieur à 40%. Hors la proportion des runs en Amérique du Nord de notre échantillon est de 43,34%, tel que présenté dans la figure 6. 
 
-Ensuite en effectuant un t-test sur la nouvelle colonne "AmeriqueN" créer contenant seulement des 0 sauf si la run se déroule en Amérique du Nord, on obtient la 2e partie de la figure 6.  
-Étant donné que la p-value est de 2.2e-16 ce qui est nettement inférieur à 2α mais que p est plus grand que pi0, nous pouvons donc considéré H0 comme vraissemblable. 
+Ensuite, en effectuant un t-test sur la nouvelle colonne "AmeriqueN" créer contenant seulement des 0 sauf si la run se déroule en Amérique du Nord, on obtient la 2e partie de la figure 6.  
+Étant donné que la p-value est de 2.2e-16 ce qui est nettement inférieur à 2α mais que p est plus grand que pi0, nous pouvons donc considérer H0 comme vraisemblable. 
   
 On peut donc soutenir cette affirmation.
 
 # Numéro 6
-*On vous dit qu’il y a en moyenne 59 représentations par run. Soutenez-vous cette affirmationau seuil α = 0, 10 ?*
+*On vous dit qu'il y a en moyenne 59 représentations par run. Soutenez-vous cette affirmation au seuil α = 0, 10 ?*
 
 ******
 
@@ -91,13 +91,13 @@ On veut tester l'hypothèse suivante au seuil de α = 0, 10 :
  H1 : mu != 59
 ~~~~~~~
 
-Ce test est considéré comme valide car : 
+Ce test est considéré comme valide, car : 
 
 ~~~~~~~
  n = 323 > 30
 ~~~~~~~
 
-Cependant , étant donnée que la p-value trouvé dans la figure 6 est inférieur à α = 0, 10, on rejette H0 et on considère H1 comme vraissemblable. 
+Cependant , étant donné que la p-value trouvé dans la figure 6 est inférieur à α = 0, 10, on rejette H0 et on considère H1 comme vraisemblable. 
 
 On ne devrait donc pas soutenir l'affirmation disant que la moyenne de représentations par run est de 59. 
 
@@ -133,7 +133,7 @@ On ne devrait donc pas soutenir l'affirmation disant que la moyenne de représen
   # source('/home/vincent/Github/mqg811/Devoir1/Devoir1_Sorties.R', encoding = 'UTF-8')
   numero4()
 ```
-
+   
 ## Figure 5
 ```{r echo=FALSE}
 # Fonctions utilisées
