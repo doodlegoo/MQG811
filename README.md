@@ -1,4 +1,5 @@
-# STT811
-Devoirs de STT811 
+# MQG811
+Devoirs de MQG811 
 
-Premier Devoir
+L'ensemble des travaux nécessaires pour le cours de MQG811 seront disponible ici.
+Ces travaux seront réalisé à l'aide du language R et des outils Rstudio et Knit Word
