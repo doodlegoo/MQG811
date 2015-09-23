@@ -65,12 +65,26 @@ numero4 <- function() {
 }
 numero5 <- function() {
   cirque = setup()
-  return ("Numéro 5") 
+ 
+  NAnombre =summary(cirque$Continent)["Amérique du Nord"]
+  n = sum(table(cirque$Continent))
+  NAprop = NAnombre / n
+  a = paste("Nombre de runs total", n, sep = ": ")
+  b = paste("Nombre de runs en Amérique du Nord", NAnombre, sep = ": ")
+  print(paste("Nombre de runs total", n, sep = ": "))
+  print(paste("Nombre de runs en Amérique du Nord", NAnombre, sep = ": "))
+  print(paste("Proportion échantillonnale en Amérique du Nord", NAprop, sep = ": "))
+  cirque$AmeriqueN <- ifelse(cirque$Continent == "Amérique du Nord" , 1, 0) 
+  
+  #print(sum(cirque$AmeriqueN))
+  t.test(cirque$AmeriqueN , mu=0.05 )
   
 }
 numero6 <- function() {
-  cirque = setup()
-  return ("Numéro 6") 
+  cirque <- setup()
+  moyenne <- mean(cirque$NbPerformances)
+  print(paste("La moyenne du nombre de représentations par runs est de", moyenne, sep = " "))
+  t.test(cirque$NbPerformances, mu=59, conf.level = 0.90 )
   
 }
 
