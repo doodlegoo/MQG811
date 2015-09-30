@@ -1,0 +1,53 @@
+---
+title: "Devoir2_réponses"
+author: "Vincent Gagnon"
+date: "30 septembre 2015"
+output: word_document
+---
+
+Ce deuxième devoir a été réalisé avec la base de données ImpactPromo_900.sav et l'analyse a été faite avec Rstudio. Ce présent document .docx a été produit à l'aide de RStudio et le R markdown. 
+
+# Numéro 1 
+*Est-ce que l’échantillon est représentatif de la population pour ce qui est de la répartition des clients dans les 5 régions ?   
+Vous devez utiliser la base de données contenant les 64 000 observations pour obtenir l’information au niveau de la population.*
+
+******
+
+# Numéro 2
+*Est-ce que la variable Collections_speciales a un impact sur la visite du site dans la semaine suivant l’envoi des offres ? Étudiez cette relation selon les étapes suivantes, en
+justifiant chacune de vos réponses :*
+
+******
+
+## Numéro 2 a)
+
+******
+
+## Numéro 2 b)
+
+******
+
+## Numéro 2 c)
+
+
+
+
+
+## Figure 1
+```{r echo=FALSE} 
+# Fonctions utilisées
+# source('~/Rstudio/STT811/mqg811/Devoir1/Devoir1_Sorties.R', encoding = 'UTF-8')
+  source('/home/vincent/Github/mqg811/Devoir1/Devoir1_Sorties.R', encoding = 'UTF-8')
+  numero1()
+```
+
+## Figure 2
+```{r echo=FALSE}
+# Fonctions utilisées
+# source('~/Rstudio/STT811/mqg811/Devoir1/Devoir1_Sorties.R', encoding = 'UTF-8')
+  source('/home/vincent/Github/mqg811/Devoir1/Devoir1_Sorties.R', encoding = 'UTF-8')
+  numero2()
+```
+
+
+```
