@@ -13,7 +13,7 @@ Ce premier devoir a été réalisé avec la base de données Devoir1_Cirque.sav 
 ******
 
 On peut voir dans la figure 1 qu'au niveau de l'échantillon des runs qui nous ont été fournis, 37.58% des spectacles se font aux États-Unis.  
-Cela représente dans l'échantillon 102 runs aux États-Unis. 
+Cela représente dans l'échantillon 102 runs aux États-Unis sur les 323 runs total.
 
 # Numéro 2
 *Donnez l'intervalle de confiance de niveau 90 % associé à la proportion échantillonnale trouvée en (1), et interprétez-le.*
