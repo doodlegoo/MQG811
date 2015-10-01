@@ -10,18 +10,42 @@ setup <- function() {
 numero1 <- function() {
   impactEchant = setup()
   impactPop = suppressWarnings(read.spss("/home/vincent/Github/mqg811/Devoir2/ImpactPromo.sav", to.data.frame=TRUE))  
-  propEchant = summary(impactEchant$Region)/sum(table(impactEchant$Region))
-  propPop = summary(impactPop$Region)/sum(table(impactPop$Region))
-  diffRegion1 = propEchant["Région 1"] - propPop["Région 1"]
-  diffRegion2 = propEchant["Région 2"] - propPop["Région 2"]
-  diffRegion3 = propEchant["Région 3"] - propPop["Région 3"]
-  diffRegion4 = propEchant["Région 4"] - propPop["Région 4"]
-  diffRegion5 = propEchant["Région 5"] - propPop["Région 5"]
-  print(diffRegion1 )
-  print(diffRegion2 )
-  print(diffRegion3 )
-  print(diffRegion4 )
-  print(diffRegion5 )
+  freqEchant = summary(impactEchant$Region)
+  freqPop =(summary(impactPop$Region)/ sum(table(impactPop$Region)) )* 900
+  print("Frequence projetté de l'échantillon")
+  print( freqEchant  )
+  print( paste("Total", sum(freqEchant), sep = ": "))
+  print("Frequence de la population")
+  print (freqPop)
+  print( paste("Total", sum(freqPop), sep = ": "))
+  
+  print ("Loi de Khi-deux")
+  print ("Pour chaque région on obtient un écart de :")
+  foobar = c()
+  
+  for (i in 1:length(freqEchant) ){
+    foo = ((freqEchant[i]-freqPop[i])^2) / freqPop[i]
+    foobar = c(foobar,foo)
+  #  print(foo)
+  }
+  print(foobar)  
+  print(paste("Total", sum(foobar),sep = ": "))
+  print(" X^2 -> p=0,05 et k=4")
+  print(qchisq(.95, df=4))
+  
+  
+  
+#  diffRegion1 = ((propEchant["Région 1"] - propPop["Région 1"])^2)/propPop["Région 1"]
+#   print(diffRegion1)
+#   diffRegion2 = ((propEchant["Région 1"] - propPop["Région 1"])^2)/propPop["Région 1"]
+#   print(diffRegion1)
+#   diffRegion3 = ((propEchant["Région 1"] - propPop["Région 1"])^2)/propPop["Région 1"]
+#   print(diffRegion1)
+#   diffRegion4 = ((propEchant["Région 1"] - propPop["Région 1"])^2)/propPop["Région 1"]
+#   print(diffRegion1)
+#   diffRegion5 = ((propEchant["Région 1"] - propPop["Région 1"])^2)/propPop["Région 1"]
+#   print(diffRegion1)
+  
 }
 
 numero2 <- function() {
