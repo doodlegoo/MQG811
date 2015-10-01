@@ -10,7 +10,6 @@ setup <- function() {
 
 numero1 <- function() {
   impactEchant = setup()
-<<<<<<< HEAD
   impactPop = suppressWarnings(read.spss("/home/vincent/Github/mqg811/Devoir2/ImpactPromo.sav", to.data.frame=TRUE))  
   freqEchant = summary(impactEchant$Region)
   freqPop =(summary(impactPop$Region)/ sum(table(impactPop$Region)) )* 900
@@ -34,41 +33,6 @@ numero1 <- function() {
   print(paste("Total", sum(foobar),sep = ": "))
   print(" X^2 -> p=0,05 et k=4")
   print(qchisq(.95, df=4))
-  
-  
-  
-#  diffRegion1 = ((propEchant["Région 1"] - propPop["Région 1"])^2)/propPop["Région 1"]
-#   print(diffRegion1)
-#   diffRegion2 = ((propEchant["Région 1"] - propPop["Région 1"])^2)/propPop["Région 1"]
-#   print(diffRegion1)
-#   diffRegion3 = ((propEchant["Région 1"] - propPop["Région 1"])^2)/propPop["Région 1"]
-#   print(diffRegion1)
-#   diffRegion4 = ((propEchant["Région 1"] - propPop["Région 1"])^2)/propPop["Région 1"]
-#   print(diffRegion1)
-#   diffRegion5 = ((propEchant["Région 1"] - propPop["Région 1"])^2)/propPop["Région 1"]
-#   print(diffRegion1)
-  
-=======
-  # impactPop = suppressWarnings(read.spss("/home/vincent/Github/mqg811/Devoir2/ImpactPromo.sav", to.data.frame=TRUE)) 
-  impactPop = suppressWarnings(read.spss("~/Rstudio/STT811/mqg811/Devoir2/ImpactPromo.sav", to.data.frame=TRUE))
-  propEchant = summary(impactEchant$Region)/sum(table(impactEchant$Region))
-  propPop = summary(impactPop$Region)/sum(table(impactPop$Region))
-  
-  n1p1 = length(propEchant)* propEchant["Région 1"]
-  
-  
-  
-  diffRegion1 = abs(propEchant["Région 1"]- propPop["Région 1"])
-  diffRegion2 = abs(propEchant["Région 2"] - propPop["Région 2"])
-  diffRegion3 = abs(propEchant["Région 3"] - propPop["Région 3"])
-  diffRegion4 = abs(propEchant["Région 4"] - propPop["Région 4"])
-  diffRegion5 = abs(propEchant["Région 5"] - propPop["Région 5"])
-  print(diffRegion1 )
-  print(diffRegion2 )
-  print(diffRegion3 )
-  print(diffRegion4 )
-  print(diffRegion5 )
->>>>>>> f567aca269abe44081368ba54cf2110bffd38cad
 }
 
 numero2 <- function() { 

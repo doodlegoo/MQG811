@@ -9,6 +9,8 @@ Ce deuxième devoir a été réalisé avec la base de données ImpactPromo_900.s
 
 Dans ce devoir, on suppose que la population est la base de données contenant les 64 000 clients et que la base de données contenant 900 clients est l'échantillon. Toutes les questions sont considéré avec un seuil de 0.05.
 
+******
+
 # Numéro 1 
 *Est-ce que l'échantillon est représentatif de la population pour ce qui est de la répartition des clients dans les 5 régions ?  
 Vous devez utiliser la base de données contenant les 64 000 observations pour obtenir l'information au niveau de la population.*
