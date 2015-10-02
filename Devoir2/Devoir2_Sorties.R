@@ -39,7 +39,11 @@ numero2 <- function() {
   impactEchant = setup()
   
   library(gmodels)
-  Tableau<- CrossTable(impactEchant$Collections_speciales, impactEchant$Visite_site, prop.c = TRUE,
+  library(plyr)
+  
+  collections = revalue(impactEchant$Collections_speciales, c("A acheté de la marchandise dans les trois collections spéciales"="3 fois sur 3"))
+  visites = impactEchant$Visite_site
+  Tableau<- CrossTable(collections, visites , digits=3, prop.c = TRUE,
                        prop.r = FALSE, prop.t = FALSE, chisq=T, prop.chisq=F, expected = T, sresid=T,  format="SPSS") 
   
 }
@@ -47,7 +51,13 @@ numero2a <- function() {
   impactEchant = setup()
   
   library(gmodels)
-  Tableau<- CrossTable(impactEchant$Collections_speciales, impactEchant$Visite_site, prop.c = TRUE,
+  library(plyr)
+  
+  collections = revalue(impactEchant$Collections_speciales, c("A acheté de la marchandise dans les trois collections spéciales"="3 fois sur 3"))
+  visites = impactEchant$Visite_site
+  
+  
+  Tableau<- CrossTable(collections, visites, prop.c = TRUE,
                        prop.r = FALSE, prop.t = FALSE, chisq=T, prop.chisq=F, expected = T, resid=T) 
 
   chi <- Tableau$chisq$statistic
