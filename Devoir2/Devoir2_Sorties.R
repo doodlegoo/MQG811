@@ -37,9 +37,22 @@ numero1 <- function() {
 
 numero2 <- function() { 
   impactEchant = setup()
-  oui = summary(impactEchant$Visite_site)["oui"]
-  non = summary(impactEchant$Visite_site)["non"]
-  if(impactEchant$Visite_site=="oui")
-    print("lala")
+  
+  library(gmodels)
+  Tableau<- CrossTable(impactEchant$Collections_speciales, impactEchant$Visite_site, prop.c = TRUE,
+                       prop.r = FALSE, prop.t = FALSE, chisq=T, prop.chisq=F, expected = T, sresid=T,  format="SPSS") 
   
 }
+numero2a <- function() { 
+  impactEchant = setup()
+  
+  library(gmodels)
+  Tableau<- CrossTable(impactEchant$Collections_speciales, impactEchant$Visite_site, prop.c = TRUE,
+                       prop.r = FALSE, prop.t = FALSE, chisq=T, prop.chisq=F, expected = T, resid=T) 
+
+  chi <- Tableau$chisq$statistic
+  k<-min(nrow(Tableau$t), ncol(Tableau$t))
+  n<- sum(Tableau$t)
+  V <- sqrt(chi/(n*(k-1)))
+  print(paste("Le v de cramer",V,sep = "= "))
+}  

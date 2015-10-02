@@ -17,10 +17,13 @@ Vous devez utiliser la base de données contenant les 64 000 observations pour o
 
 ******
 
-Comme on peut le voir dans la figure 1, la différence entre la répartition des clients dans l'échantillon et dans la population varie entre 0.7776042% et 2.237847%.  
+On pose les hypothèse suivantes :  
 
-Ceci est moindre que notre seuil de 5%, on peut donc déduire que l'échantillon est représentatif selon sa répartition dans les différentes régions. 
+H~0~ : Les proportions de l'échantillon représentent bien les proportions de la population.  
+H~1~ : Les proportions de l'échantillon ne représentent pas les proportions de la population.  
 
+En utilisant le test de Khi-Deux, tel qu'illustrer dans la Figure 1, on constate que : x^2^ =4.7258 < 9.4877$   
+On ne rejette donc pas H~0~. On considère le test du Khi-deux fiable étant donné que toutes les fréquences sont supérieur à 5.
 
 # Numéro 2
 *Est-ce que la variable Collections_speciales a un impact sur la visite du site dans la semaine suivant l'envoi des offres ?  
@@ -28,13 +31,29 @@ Ceci est moindre que notre seuil de 5%, on peut donc déduire que l'échantillon
 
 ******
 
+On pose les hypothèse suivantes :  
+
+H~0~ : Dans la population, les collections spéciales n'ont  pas d'impact sur les visites du site web.  
+H~1~ : Dans la population, les collections spéciales ont un impact sur les visites du site web.  
+
 ## Numéro 2 a)
 *Testez s'il y a un lien, et dites si ce test est valide.*
 
 ******
 
+Dans la figure 2, on peut voir la table de contingence dont nous nous servirons pour ce numéro.  
+
+Étant donnée que la p-value est de 6.596928e-15 , ce qui est nettement inférieur au seuil de 0.05, on rejette H~0~   
+  
+Donc, au risque de se tromper 1 fois sur 20, on peut affirmer que les collections spéciales on un impact sur les visites du site web.   
+
+
 ## Numéro 2 b)
 *Quelle est la force du lien ?*
+
+******
+
+Dans la Figure 3, on peut voir que le V de Cramer est inférieur à 0.30 donc on peut considérer la relation comme faible.
 
 
 ******
@@ -42,8 +61,13 @@ Ceci est moindre que notre seuil de 5%, on peut donc déduire que l'échantillon
 ## Numéro 2 c)
 *Faites l'interprétation du tableau, mais seulement pour la ligne du oui (donc la ligne qui correspond aux clients ayant visité le site)*
 
+******
 
+*Analyse descriptive selon la Figure 2*  
+71,5% des gens ont visité le site web alors qu'ils n'ont pas acheté de la marchandise des trois collections spéciales. Ensuite, 13.9% des gens ont visité le site et ont profité une fois des collections spéciales. Finalement, autant de gens on visité le site web, qu'ils aient profité 2fois ou 3 fois des collections spéciales, soit 7,3%. 
 
+*Analyse de mise en évidence selon la Figure 2*  
+Les visiteurs n'ayant pas acheté de la marchandise des trois collections spéciales sont une absences **marquée** sur le site internet. Cependant, ceux qui on profité une ou 2 fois des collections spécials ont une présence **significative** sur le site web. Les clients qui ont acheté de la marchandise dans les trois collections spéciales ont une présence **marquée** sur les visites du site web. 
 
 ## Figure 1
 ```{r echo=FALSE} 
@@ -62,4 +86,10 @@ Ceci est moindre que notre seuil de 5%, on peut donc déduire que l'échantillon
 ```
 
 
+## Figure 3
+```{r echo=FALSE}
+# Fonctions utilisées
+#  source('~/Rstudio/STT811/mqg811/Devoir2/Devoir2_Sorties.R', encoding = 'UTF-8')
+ source('/home/vincent/Github/mqg811/Devoir2/Devoir2_Sorties.R', encoding = 'UTF-8')
+  numero2a()
 ```
