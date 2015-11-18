@@ -7,23 +7,31 @@ output: word_document
 
 Ce troisième devoir a été réalisé avec la base de données Devoir3_Cirque.sav et l'analyse a été faite avec Rstudio. Ce présent document .docx a été produit à l'aide de RStudio et le R markdown. 
 
-Dans ce devoir, on suppose que la population est la base de données contenant les 64 000 clients et que la base de données contenant 900 clients est l'échantillon. Toutes les questions sont considéré avec un seuil de 0.05.
 
 ******
 
-# Numéro 1 
-*Est-ce que l'échantillon est représentatif de la population pour ce qui est de la répartition des clients dans les 5 régions ?  
-Vous devez utiliser la base de données contenant les 64 000 observations pour obtenir l'information au niveau de la population.*
+# Partie 1 
+*Le but de cette première partie est de faire un premier modèle très simple pour prévoir le nombre de billets qui sont vendus lors d’une run.  
+Utilisez les sorties pertinentes des figures 1, 2, 3, 4 et 5 pour répondre aux questions suivantes.*
 
-```{r echo=FALSE}
-# Fonctions utilisées
-#  source('~/Rstudio/STT811/mqg811/Devoir2/Devoir2_Sorties.R', encoding = 'UTF-8')
-  source("Devoir3_Sorties.R", encoding = 'UTF-8') 
-  library(foreign)
-  cirque <- read.spss(("Devoir3_Cirque.sav"), to.data.frame=TRUE)
-  summary(cirque$Pays)
 
-```
+## Numéro 1
+*Commencez par une brève analyse descriptive des 4 variables concernées. Ne faites pas
+de rédaction, ne faites qu’examiner les sorties, elles pourraient vous être utiles pendant les
+analyses.*
+
+## Numéro 2
+*Parmi les variables NombreJoursVente , NbPerformances et Marketing , laquelle semble
+avoir le lien le plus fort avec le nombre de billets vendus ? Justifiez.*
+## Numéro 3
+*Est-ce que le lien entre le nombre de billets vendus et la variable identifiée en 2 semble
+linéaire ? Justifiez.*
+
+## Numéro 4
+*Quelle proportion de la variation du nombre de billets vendus est expliquée par la variable
+identifiée en 2 ?*
+
+
 
 
 
@@ -82,7 +90,14 @@ Dans la Figure 3, on peut voir que le V de Cramer est inférieur à 0.30 donc on
 Les visiteurs n'ayant pas acheté de la marchandise des trois collections spéciales sont une absences **marquée** sur le site internet. Cependant, ceux qui on profité une ou 2 fois des collections spécials ont une présence **significative** sur le site web. Les clients qui ont acheté de la marchandise dans les trois collections spéciales ont une présence **marquée** sur les visites du site web. 
 
 ## Figure 1
-```{r echo=FALSE} 
+```{r echo=FALSE}
+# Fonctions utilisées
+#  source('~/Rstudio/STT811/mqg811/Devoir2/Devoir2_Sorties.R', encoding = 'UTF-8')
+  source("Devoir3_Sorties.R", encoding = 'UTF-8') 
+  library(foreign)
+  cirque <- read.spss(("Devoir3_Cirque.sav"), to.data.frame=TRUE)
+  summary(cirque$Pays)
+
 ```
 
 ## Figure 2
