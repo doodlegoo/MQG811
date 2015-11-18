@@ -11,92 +11,80 @@ Ce troisième devoir a été réalisé avec la base de données Devoir3_Cirque.s
 ******
 
 # Partie 1 
-*Le but de cette première partie est de faire un premier modèle très simple pour prévoir le nombre de billets qui sont vendus lors d’une run.  
-Utilisez les sorties pertinentes des figures 1, 2, 3, 4 et 5 pour répondre aux questions suivantes.*
+*On essaie de créer un modèle simple pour prévoir le nombre de billets vendus. On utilise les figures 1 à 5, qui était fourni dans l'énoncé.*
 
 
-## Numéro 1
+## Numéro 1  
 *Commencez par une brève analyse descriptive des 4 variables concernées. Ne faites pas
 de rédaction, ne faites qu’examiner les sorties, elles pourraient vous être utiles pendant les
 analyses.*
 
-## Numéro 2
+Voir la figure 1
+
+## Numéro 2  
 *Parmi les variables NombreJoursVente , NbPerformances et Marketing , laquelle semble
 avoir le lien le plus fort avec le nombre de billets vendus ? Justifiez.*
-## Numéro 3
+
+## Numéro 3  
 *Est-ce que le lien entre le nombre de billets vendus et la variable identifiée en 2 semble
 linéaire ? Justifiez.*
 
-## Numéro 4
+## Numéro 4  
 *Quelle proportion de la variation du nombre de billets vendus est expliquée par la variable
 identifiée en 2 ?*
 
 
+********************************
 
+# Partie 2
+*On cherche un modèle pour prévoir le nombre de billets vendu par années. On commence alors à faire une régression linéaire multiple à 4 variables : NombreJoursVente , NbPerformances , LongTermOrientation et AppreciationShow. Le seuil de confiance de la partie 2 sera de 0,05*
 
+## Numéro 1  
+Générez et fournissez les statistiques descriptives des variables AppreciationShow et Long
+TermeOrientation . Ne faites aucune rédaction, ne faites qu’examiner cette sortie, elle pour-
+rait vous être utile pendant les analyses.
 
-******
+## Numéro 2  
+Générez (et fournissez) toutes les sorties du modèle de régression linéaire multiple avec les
+quatre variables explicatives, incluant les sorties concernant les résidus, et sauvegardez les
+résidus standardisés (ceci est nécessaire pour produire le test de normalité, qui fait partie des
+sorties concernant les résidus).
 
-On pose les hypothèse suivantes :  
+## Numéro 3  
+Procédons maintenant à l’analyse et l’utilisation du modèle généré en 2 :  
 
-H~0~ : Les proportions de l'échantillon représentent bien les proportions de la population.  
-H~1~ : Les proportions de l'échantillon ne représentent pas les proportions de la population.  
+### (a)  
+*Faites l’analyse de la validité de ce modèle.*  
 
-En utilisant le test de Khi-Deux, tel qu'illustrer dans la Figure 1, on constate que : x^2^ =4.7258 < 9.4877$   
-On ne rejette donc pas H~0~. On considère le test du Khi-deux fiable étant donné que toutes les fréquences sont supérieur à 5.
+### (b)  
+*Du point de vue de l’explication de la variation du nombre de billets vendus, quel est le gain de ce modèle relativement à celui étudié à la partie 1 ?*  
 
-# Numéro 2
-*Est-ce que la variable Collections_speciales a un impact sur la visite du site dans la semaine suivant l'envoi des offres ?  
-Étudiez cette relation selon les étapes suivantes, en justifiant chacune de vos réponses :*
+### (c)  
+*Est-ce que cette régression multiple est significative ? Rédigez tous les détails pour répondre à cette question.*
 
-******
+###(d)  
+*Écrivez l’équation du modèle, et interprétez-la. Est-il possible d’interpréter la constante en tant que prévision du modèle ? Justifiez.*
 
-On pose les hypothèse suivantes :  
+###(e)  
+*Estimez ponctuellement et par intervalle de confiance de niveau 95 % le nombre de billets vendus en moyenne pour des runs ayant 100 performances, ayant obtenu une appréciation moyenne de 8 sur 10 , dont les billets ont été en vente pendant 125 jours, et dans une région ayant un score de 60 pour le Long Term Orientation. Il n’est pas obligatoire de fournir une capture d’écran.*
 
-H~0~ : Dans la population, les collections spéciales n'ont  pas d'impact sur les visites du site web.  
-H~1~ : Dans la population, les collections spéciales ont un impact sur les visites du site web.  
+### (f)  
+*Calculez le MAD et le MAPE de ce modèle, et interprétez-les (simplement expliquer ce qu’ils signifient).*
 
-## Numéro 2 a)
-*Testez s'il y a un lien, et dites si ce test est valide.*
-
-******
-
-Dans la figure 2, on peut voir la table de contingence dont nous nous servirons pour ce numéro.  
-
-Étant donnée que la p-value est de 6.596928e-15 , ce qui est nettement inférieur au seuil de 0.05, on rejette H~0~   
-  
-Donc, au risque de se tromper 1 fois sur 20, on peut affirmer que les collections spéciales on un impact sur les visites du site web.   
-
-
-## Numéro 2 b)
-*Quelle est la force du lien ?*
-
-******
-
-Dans la Figure 3, on peut voir que le V de Cramer est inférieur à 0.30 donc on peut considérer la relation comme faible.
-
+### (g) (Bonus)   
+*Supposons que ce modèle soit jugé assez précis pour qu’un gestionnaire décide de l’utiliser afin de prévoir combien de billets pourront être vendus pour une run qui commence dans deux mois. Pensez-vous que ce modèle pourra être utilisé tel quel ? Justifiez.*
 
 ******
-
-## Numéro 2 c)
-*Faites l'interprétation du tableau, mais seulement pour la ligne du oui (donc la ligne qui correspond aux clients ayant visité le site)*
-
-******
-
-*Analyse descriptive selon la Figure 2*  
-71,5% des gens ont visité le site web alors qu'ils n'ont pas acheté de la marchandise des trois collections spéciales. Ensuite, 13.9% des gens ont visité le site et ont profité une fois des collections spéciales. Finalement, autant de gens on visité le site web, qu'ils aient profité 2fois ou 3 fois des collections spéciales, soit 7,3%. 
-
-*Analyse de mise en évidence selon la Figure 2*  
-Les visiteurs n'ayant pas acheté de la marchandise des trois collections spéciales sont une absences **marquée** sur le site internet. Cependant, ceux qui on profité une ou 2 fois des collections spécials ont une présence **significative** sur le site web. Les clients qui ont acheté de la marchandise dans les trois collections spéciales ont une présence **marquée** sur les visites du site web. 
 
 ## Figure 1
 ```{r echo=FALSE}
 # Fonctions utilisées
 #  source('~/Rstudio/STT811/mqg811/Devoir2/Devoir2_Sorties.R', encoding = 'UTF-8')
-  source("Devoir3_Sorties.R", encoding = 'UTF-8') 
-  library(foreign)
-  cirque <- read.spss(("Devoir3_Cirque.sav"), to.data.frame=TRUE)
-  summary(cirque$Pays)
+  library(png)
+
+  #read file
+  img<-readPNG("StatsDescr1.png")
+
 
 ```
 
