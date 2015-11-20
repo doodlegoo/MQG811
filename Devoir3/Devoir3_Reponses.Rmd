@@ -16,7 +16,7 @@ Ce troisième devoir a été réalisé avec la base de données Devoir3_Cirque.s
 ## Numéro 1  
 *Commencez par une brève analyse descriptive des 4 variables concernées. **Ne faites pas de rédaction** , ne faites qu'examiner les sorties, elles pourraient vous être utiles pendant les analyses.*
 
-Voir la **figure 1**.
+Voir la **Figure 1**.
 
 ## Numéro 2  
 *Parmi les variables NombreJoursVente , NbPerformances et Marketing , laquelle semble avoir le lien le plus fort avec le nombre de billets vendus ? Justifiez.*
@@ -28,9 +28,9 @@ On peut voir d'après la **Figure 2**, que la variable "NbPerformances" semble �
 ## Numéro 3  
 *Est-ce que le lien entre le nombre de billets vendus et la variable identifiée en 2 semble linéaire ? Justifiez.*
 
-Cependant, il est essentiel de faire une analyse visuelle du graphique de la relation pour s'assurer que leur lien est bel et bien linéaire. Avec la **Figure 3**, on constate que le graphique "Nb de performances - Billets" est celui qui se rapproche effectivement le plus d'un modèle linéaire.  
+Il est essentiel de faire une analyse visuelle du graphique de la relation pour s'assurer que leur lien est bel et bien linéaire. Avec la **Figure 3**, on constate que le graphique "Nb de performances - Billets" est celui qui se rapproche effectivement le plus d'un modèle linéaire.  
   
-On peut aussi remarquer que le graphique "Nb jour de vente - Billets" semble complètement éparpiller au centre du graphique et le graphique "Total marketing - Billets" semble avoir des "strates" ce qui semble suggérer un modèle assez compliquer pour le marketing. 
+On peut aussi remarquer que le graphique "Nb jour de vente - Billets" semble complètement éparpiller au centre du graphique et le graphique "Total marketing - Billets" semble avoir des "strates" ce qui semble suggérer un modèle assez compliqué pour le marketing. 
 
 
 ## Numéro 4  
@@ -44,26 +44,26 @@ R2 = R * R
 print(R2*100)
 
 ```
-Donc, le R² nous indique que 43.1649% de la variation du nombre du nombre de billets vendus est représenté par le nombre de représentation. 
+Donc, le R² nous indique que 43.1649% de la variation du nombre de billets vendus est représentée par le nombre de représentations. 
 
 ## Numéro 5 
 *Écrivez l'équation de la droite de régression qui a la variable identifiée en 2 comme variable explicative, et interprétez-la.*
 
 
-ŷ~billets vendus~ = b~0~ + b~1~ X~NbRepresentation~ = 19757.689 + 2335.077 X~NbRepresentation~
+ŷ~billetsVendus~ = b~0~ + b~1~ X~NbRepresentation~ = 19757.689 + 2335.077 X~NbRepresentation~
 
 
 
 Voir la **figure 4**. 
 
-Cette équation détermine le nombre de billets qu'on pourrait selon le nombre de représentation. On peut voir que dans le cas ou le nombre de représentation serait 0, il y aurait quand même 19575 billets de vendu. Ceci est insensé. On pourrait penser que cette erreur est du qu'il y a toujours au moins 19575 billets qui seraient vendu pour chaque "run" à des fidèles clients qui vont à tout les "runs". 
+Cette équation détermine le nombre de billets qu'on pourrait selon le nombre de représentations. On peut voir que si le nombre de représentations était de 0, il y aurait quand même 19575 billets de vendus. Ceci est insensé. On pourrait penser que cette erreur est du qu'il y a toujours au moins 19575 billets qui seraient vendus pour chaque "run" à des fidèles clients qui vont à toutes les "runs". 
 
 ## Numéro 6
 *Utilisez l'équation écrite en 5 pour prévoir le nombre de billets vendus lorsque la variable explicative a une valeur de 150.*
 Soit :  
-ŷ~billets vendus~ = b~0~ + b~1~ X~NbRepresentation~ = 19757.689 + 2335.077 X~NbRepresentation~
+ŷ~billetsVendus~ = b~0~ + b~1~ X~NbRepresentation~ = 19757.689 + 2335.077 X~NbRepresentation~
   
-On pourrait donc prévoir que si le Cirque décide de faire 150 représentations, le nombre de billets vendu serait déterminer par l'équation suivante : 
+On pourrait donc prévoir que si le Cirque décide de faire 150 représentations, le nombre de billets vendus serait déterminé par l'équation suivante : 
 ```{r}
 y = (19757.689 + 2335.077 * 150)
 print(y)
@@ -95,26 +95,27 @@ Pour faire l'analyse de la validité, nous allons vérifier les 3 aspects suivan
 
 **Voir la figure 7**
 
-1. La taille de l'échantillon est suffisante étant donnée que dans la variable "LongTermeOrientation" est celle avec le moins de résultat valide et celle-ci regroupe 315 observations : 
+1. La taille de l'échantillon est suffisante étant donné que dans la variable "LongTermeOrientation" est celle avec le moins de résultats valides et celle-ci regroupe 315 observations : 
 
 ```
 n = 315 > 10*4 = 40
 
 ```
 
-2. Les valeurs du VIF nous permet de constater qu'il n'y a pas de problème de multicolinéarité dans ce modèle puisque le plus grand des VIF est de 1.362140. Donc les analyses faites à partir de la table des coefficients ne sont pas affectée par un problème de multicolinéarité. Elles peuvent être considérées valide si le modèle semble assez valide et performant pour être utilisé. 
+2. Les valeurs du VIF nous permet de constater qu'il n'y a pas de problème de multicolinéarité dans ce modèle puisque le plus grand des VIF est de 1.362140. Donc les analyses faites à partir de la table des coefficients ne sont pas affectées par un problème de multicolinéarité. Elles peuvent être considérées valides si le modèle semble assez valide et performant pour être utilisé. 
 
 
 3. On utilise le test de normalité pour tester ces hypothèses :   
 
+
 H~0~ : Au niveau de la population, les résidus se distribuent selon une loi normale.  
 H~1~ : Au niveau de la population, les résidus ne se distribuent pas selon une loi normale.  
 
-Étant donné qu'au moins une des 2 valeur de P est suppérieur au seuil de 0,05, on conserve H~0~ . On considère donc que les données se distribuent selon une loi normale. Cette dernière considération nous permet d'assurer l'inférence  faite à partir de ce modèle. 
+Étant donné qu'au moins une des 2 valeurs de P est supérieure au seuil de 0,05, on conserve H~0~ . On considère donc que les données se distribuent selon une loi normale. Cette dernière considération nous permet d'assurer l'inférence  faite à partir de ce modèle. 
 
 Il ne reste qu'à évaluer le graphique des résidus. 
 
-Avec une analyse visuelle du graphique, les points sembles assez aléatoire autant en haut qu'en bas de la ligne du centre. On ne peut pas y percevoir une courbe ou de variance. On peut voir qu'il y a une valeur qui dépasse un peu 3x la valeur de l'écart type.
+Avec une analyse visuelle du graphique, les points semblent assez aléatoires autant en haut qu'en bas de la ligne du centre. On ne peut pas y percevoir une courbe ou de variance. On peut voir qu'il y a une valeur qui dépasse un peu 3x la valeur de l'écart type.
 
 
 ### (b)  
@@ -141,17 +142,17 @@ H~1~ : La régression est significative dans la population.
 
 ŷ = -111178.10 + 301.04 X~NombreJoursVente~ + 1977.64 X~NbPerformances~ + 712.54 X~LongTermOrientation~ + 8541.68 X~AppreciationShow~    
 
-Cette formule issue de notre tableau des Coefficients, représente le nombre de billets vendu en fontionc du nombre de jour de ventes, du Nombre de Performances, de l'Orientation à long terme et de l'appreciation du Show. La valeur nulle pour chacune des variables n'est pas possible. En effet comment pourrait t'on avoir un show qui n'a aucune performance, par exemple.   
+Cette formule issue de notre tableau des Coefficients représente le nombre de billets vendu en fonction du nombre de jours de ventes, du Nombre de Performances, de l'Orientation à long terme et de l'appréciation du Show. La valeur nulle pour chacune des variables n'est pas possible. En effet, comment pourrait-t'on avoir un show qui n'a aucune performance, par exemple.   
 
-Pour B~0~, la constante est de -111178.10.  il ne serait pas possible de vendre un nombre de billets négatif, donc pour que la formule soit applicable, il faut avoir une nombre assez élevé dans chacun des autres variables. Il y a 95% des chances que cette valeur se situe entre -151626.4356 et -70729.7572.  
+Pour B~0~, la constante est de -111178.10.  il ne serait pas possible de vendre un nombre de billets négatif, donc pour que la formule soit applicable, il faut avoir un nombre assez élevé dans chacune des autres variables. Il y a 95% des chances que cette valeur se situe entre -151626.4356 et -70729.7572.  
 
 Pour B~1~, on peut voir que le fait d'ajouter une journée de vente pour un show permet d'augmenter les ventes de 301,04 billets. Il y a 95% des chances que cette valeur se situe entre 115.0489 et 487.0367. Cette variable est certainement la moins couteuse modifier, étant donné les faibles coûts d'ajouter une journée de vente, comparativement à ajouter une représentation.   
 
-Pour B~2~, on peut voir que chaque performance additionnel permet d'augmenter les ventes vendus de 1977.64 billets. Il y a 95% des chances que cette valeur se situe entre 1676.0306 et 2279.2566. Cette variable permet facilement d'augmenter le nombre de billets vendus, cependant dans une optique business, il faudrait vérifier que les 1977 billets peuvent payer pour les frais additionnels d'une représentation de plus.   
+Pour B~2~, on peut voir que chaque performance additionnelle permet d'augmenter les ventes de 1977.64 billets. Il y a 95% des chances que cette valeur se situe entre 1676.0306 et 2279.2566. Cette variable permet facilement d'augmenter le nombre de billets vendus, cependant dans une optique business, il faudrait vérifier que les 1977 billets peuvent payer pour les frais additionnels d'une représentation de plus.   
 
-Pour B~3~, on peut voir que chaque points additionnel dans l'orientation long terme permet d'augmenter les ventes vendus de 712.54 billets. Il y a 95% des chances que cette valeur se situe entre 524.0725 et 901.0034.  
+Pour B~3~, on peut voir que chaque point additionnel dans l'orientation long terme permettent d'augmenter les ventes de 712.54 billets. Il y a 95% des chances que cette valeur se situe entre 524.0725 et 901.0034.  
 
-Pour B~4~, on peut voir que chaque points additionnel sur l'appreciation d'un show permet d'augmenter les ventes vendus de 8541.68 billets. Il y a 95% des chances que cette valeur se situe entre 5698.6071 et 11384.7514. Cette valeur étant sur 10, il risque d'être difficile de se concentrer seulement sur cette variable pour augmenter les ventes de billets.   
+Pour B~4~, on peut voir que chaque point additionnel sur l'appréciation d'un show permet d'augmenter les ventes de 8541.68 billets. Il y a 95% des chances que cette valeur se situe entre 5698.6071 et 11384.7514. Cette valeur étant sur 10, il risque d'être difficile de se concentrer seulement sur cette variable pour augmenter les ventes de billets.   
 
 
 ###(e)  
@@ -167,8 +168,13 @@ print(y)
 ### (f)  
 *Calculez le MAD et le MAPE de ce modèle, et interprétez-les (simplement expliquer ce qu'ils signifient).*
 
-Lindice de perfomance MAD permet de mesurer l'ampleur de l'erreur d'un modèle statistique. 
+L'indice de performance MAD (Mean Absolute Deviation) permet de mesurer l'ampleur de l'erreur d'un modèle statistique. 
 
+MAD : 24667.583
+
+L'indice MAPE signifie que le "Mean  Absolute Percentage Error" permet de mesurer les erreurs en terme de pourcentage. Avec cet indice, on peut comparer l'ampleur des erreurs d'une série. 
+
+MAPE : 18,31 %
 
 
 

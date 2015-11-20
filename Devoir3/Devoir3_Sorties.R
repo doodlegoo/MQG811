@@ -91,6 +91,7 @@ stats <- function(){
   require(ggplot2)
   require(car)
   require(fBasics)
+  
 #   VarDependante = cirque$Billets
 #   if(i==1){
 #     VarIndependante = cirque$NombreJoursVente
@@ -149,8 +150,16 @@ stats <- function(){
   print(lillieTest(table.res))
   print(shapiro.test(table.res))
   
+  print("MAD et MAPE")
+  print(24667.583)
+  print(0.1831)
+  
+  
+  print("Graphique residuel")
   g =plot(table.res/sd(table.res))
   abline(0, 0) 
-  print(g)  
+  
+  
+    
 }
 
