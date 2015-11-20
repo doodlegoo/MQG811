@@ -7,51 +7,94 @@ output: word_document
 
 Ce troisième devoir a été réalisé avec la base de données Devoir3_Cirque.sav et l'analyse a été faite avec Rstudio. Ce présent document .docx a été produit à l'aide de RStudio et le R markdown. 
 
+**************************************
 
-******
-
-# Partie 1 
+# **Partie 1**
 *On essaie de créer un modèle simple pour prévoir le nombre de billets vendus. On utilise les figures 1 à 5, qui était fourni dans l'énoncé.*
 
 
 ## Numéro 1  
-*Commencez par une brève analyse descriptive des 4 variables concernées. Ne faites pas
-de rédaction, ne faites qu’examiner les sorties, elles pourraient vous être utiles pendant les
+*Commencez par une brève analyse descriptive des 4 variables concernées. **Ne faites pas
+de rédaction** , ne faites qu’examiner les sorties, elles pourraient vous être utiles pendant les
 analyses.*
 
-Voir la figure 1
+Voir la figure 1.
 
 ## Numéro 2  
 *Parmi les variables NombreJoursVente , NbPerformances et Marketing , laquelle semble
 avoir le lien le plus fort avec le nombre de billets vendus ? Justifiez.*
 
+On peut voir d'après la **Figure 2**, que la variable "NbPerformances" semble être la variable qui influence le plus la vente de billets. En effet, avec un coefficient de 0.657 on peut dire que la corrélation semble *forte*.  
+  
+
+
 ## Numéro 3  
 *Est-ce que le lien entre le nombre de billets vendus et la variable identifiée en 2 semble
 linéaire ? Justifiez.*
+
+Cependant, il est essentiel de faire une analyse visuelle du graphique de la relation pour s'assurer que leur lien est bel et bien linéaire. Avec la **Figure 3**, on constate que le graphique "Nb de performances - Billets" est celui qui se rapproche effectivement le plus d'un modèle linéaire.  
+  
+On peut aussi remarquer que le graphique "Nb jour de vente - Billets" semble complètement éparpiller au centre du graphique et le graphique "Total marketing - Billets" semble avoir des "strates" ce qui semble suggérer un modèle assez compliquer pour le marketing. 
+
 
 ## Numéro 4  
 *Quelle proportion de la variation du nombre de billets vendus est expliquée par la variable
 identifiée en 2 ?*
 
+Soit le coefficient R = 0.657, on peut déterminer que 
+
+``` {r}
+R = 0.657
+R2 = R * R 
+print(R2*100)
+
+```
+Donc, le R² nous indique que 43.1649% de la variation du nombre du nombre de billets vendus est représenté par le nombre de représentation. 
+
+## Numéro 5 
+*Écrivez l’équation de la droite de régression qui a la variable identifiée en 2 comme variable explicative, et interprétez-la.*
+
+
+ŷ~billets vendus~ = b~0~ + b~1~ X~NbRepresentation~ = 19757.689 + 2335.077 X~NbRepresentation~
+
+
+
+Voir la figure 4. 
+
+Cette équation détermine le nombre de billets qu'on pourrait selon le nombre de représentation. On peut voir que dans le cas ou le nombre de représentation serait 0, il y aurait quand même 19575 billets de vendu. Ceci est insensé. On pourrait penser que cette erreur est du qu'il y a toujours au moins 19575 billets qui seraient vendu pour chaque "run" à des fidèles clients qui vont à tout les "runs". 
+
+## Numéro 6
+*Utilisez l’équation écrite en 5 pour prévoir le nombre de billets vendus lorsque la variable explicative a une valeur de 150.*
+Soit :  
+ŷ~billets vendus~ = b~0~ + b~1~ X~NbRepresentation~ = 19757.689 + 2335.077 X~NbRepresentation~
+  
+On pourrait donc prévoir que si le Cirque décide de faire 150 représentations, le nombre de billets vendu serait déterminer par l'équation suivante : 
+```{r}
+y = (19757.689 + 2335.077 * 150)
+print(y)
+
+```
 
 ********************************
 
-# Partie 2
+# **Partie 2**
 *On cherche un modèle pour prévoir le nombre de billets vendu par années. On commence alors à faire une régression linéaire multiple à 4 variables : NombreJoursVente , NbPerformances , LongTermOrientation et AppreciationShow. Le seuil de confiance de la partie 2 sera de 0,05*
 
 ## Numéro 1  
-Générez et fournissez les statistiques descriptives des variables AppreciationShow et Long
-TermeOrientation . Ne faites aucune rédaction, ne faites qu’examiner cette sortie, elle pour-
-rait vous être utile pendant les analyses.
+*Générez et fournissez les statistiques descriptives des variables AppreciationShow et Long
+TermeOrientation . **Ne faites aucune rédaction**, ne faites qu’examiner cette sortie, elle pour-
+rait vous être utile pendant les analyses.*
+
+Voir **Figure 5**
 
 ## Numéro 2  
-Générez (et fournissez) toutes les sorties du modèle de régression linéaire multiple avec les
+*Générez (et fournissez) toutes les sorties du modèle de régression linéaire multiple avec les
 quatre variables explicatives, incluant les sorties concernant les résidus, et sauvegardez les
 résidus standardisés (ceci est nécessaire pour produire le test de normalité, qui fait partie des
-sorties concernant les résidus).
+sorties concernant les résidus).*
 
 ## Numéro 3  
-Procédons maintenant à l’analyse et l’utilisation du modèle généré en 2 :  
+*Procédons maintenant à l’analyse et l’utilisation du modèle généré en 2 :  *
 
 ### (a)  
 *Faites l’analyse de la validité de ce modèle.*  
@@ -79,20 +122,42 @@ Procédons maintenant à l’analyse et l’utilisation du modèle généré en 
 ## Figure 1
 ```{r echo=FALSE}
 # Fonctions utilisées
-#  source('~/Rstudio/STT811/mqg811/Devoir2/Devoir2_Sorties.R', encoding = 'UTF-8')
-  library(png)
-
-  #read file
-  img<-readPNG("StatsDescr1.png")
+# source('~/Rstudio/STT811/mqg811/Devoir1/Devoir1_Sorties.R', encoding = 'UTF-8')
+  source('/home/vincent/Github/mqg811/Devoir3/Devoir3_Sorties.R', encoding = 'UTF-8')
+  print("Statistique descritive")
+  numero1()
 
 
 ```
 
 ## Figure 2
-```{r echo=FALSE}
 
-```
+Corrélation : 
+![](corrélation.png)
+
 
 ## Figure 3
 ```{r echo=FALSE}
+# Fonctions utilisées
+# source('~/Rstudio/STT811/mqg811/Devoir1/Devoir1_Sorties.R', encoding = 'UTF-8')
+  source('/home/vincent/Github/mqg811/Devoir3/Devoir3_Sorties.R', encoding = 'UTF-8')
+  numero2(1)
+  numero2(2)
+  numero2(3) 
+  
 ```
+
+## Figure 4
+
+Coefficients : 
+![](coefficients.png)
+
+## Figure 5
+```{r echo=FALSE}
+# Fonctions utilisées
+# source('~/Rstudio/STT811/mqg811/Devoir1/Devoir1_Sorties.R', encoding = 'UTF-8')
+  source('/home/vincent/Github/mqg811/Devoir3/Devoir3_Sorties.R', encoding = 'UTF-8')
+  numero3()
+
+```
+
